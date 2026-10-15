@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مترجم زبان پارتنر</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f4ff;--card:#fff;--tx:#241b3d;--mut:#7a7399;--bd:#e3dcff;--p:#7c3aed;--a:#ec4899;--b:#3b82f6;--me:#efe9ff;--r:20px;--f:Vazirmatn,Tahoma,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0a22;--card:#1a1438;--tx:#f1ecff;--mut:#a79fcf;--bd:#34296b;--me:#2a2058}}
+:root[data-theme="dark"]{--bg:#0e0a22;--card:#1a1438;--tx:#f1ecff;--mut:#a79fcf;--bd:#34296b;--me:#2a2058}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--f);line-height:1.8}
+.wrap{max-width:560px;margin:0 auto;padding:28px 16px 48px}
+header{text-align:center;margin-bottom:20px}
+h1{font-size:clamp(28px,8vw,42px);font-weight:900;margin:0;background:linear-gradient(120deg,var(--b),var(--p),var(--a),var(--b));background-size:220% 220%;animation:flow 6s ease infinite;-webkit-background-clip:text;background-clip:text;color:transparent}
+header p{margin:4px 0 0;color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:16px;box-shadow:0 6px 24px rgba(214,69,107,.08)}
+textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--bd);border-radius:14px;background:var(--bg);color:var(--tx);resize:none;outline:none}
+textarea:focus{border-color:var(--p)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
+.chip{border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:999px;padding:3px 12px;font:inherit;font-size:13px;cursor:pointer}
+.chip:active{background:var(--me)}
+.go{width:100%;margin-top:10px;border:0;border-radius:14px;padding:12px;font:inherit;font-size:17px;font-weight:700;color:#fff;background:linear-gradient(120deg,var(--b),var(--p),var(--a));background-size:200% 200%;animation:flow 5s ease infinite;box-shadow:0 8px 24px rgba(124,58,237,.45);cursor:pointer}
+.go:active{transform:scale(.98)}
+#out{margin-top:18px}
+.b{max-width:88%;padding:10px 14px;border-radius:18px;margin:8px 0;animation:pop .35s ease}
+.her{background:var(--me);border-bottom-right-radius:4px;margin-left:auto}
+.you{background:linear-gradient(120deg,var(--b),var(--p),var(--a));box-shadow:0 8px 24px rgba(124,58,237,.4);color:#fff;border-bottom-left-radius:4px;font-weight:700;font-size:18px}
+.lab{font-size:12px;color:var(--mut);margin:10px 4px 0}
+.meter{display:flex;align-items:center;gap:6px;margin:12px 0 4px;font-size:14px}
+.meter i{font-style:normal;font-size:20px;opacity:.2;filter:grayscale(1)}
+.meter i.on{opacity:1;filter:none}
+.move{margin-top:8px;padding:10px 14px;border-radius:14px;background:var(--bg);border:1px dashed var(--bd);font-size:14px}
+.row{display:flex;gap:8px;margin-top:12px}
+.sm{flex:1;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:12px;padding:8px;font:inherit;cursor:pointer}
+.tag{display:inline-block;font-size:11px;color:var(--mut);margin-top:6px}
+.dots span{display:inline-block;animation:bl 1s infinite;font-size:26px}
+.dots span:nth-child(2){animation-delay:.2s}.dots span:nth-child(3){animation-delay:.4s}
+.ld{text-align:center;color:var(--mut)}
+footer{text-align:center;color:var(--mut);font-size:13px;margin-top:24px}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes bl{0%,100%{opacity:.2}50%{opacity:1}}
+@keyframes flow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes up{to{transform:translateY(-115vh) rotate(40deg);opacity:0}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(124,58,237,.0),0 10px 40px rgba(124,58,237,.25)}50%{box-shadow:0 0 0 4px rgba(59,130,246,.15),0 10px 48px rgba(236,72,153,.35)}}
+body{background:radial-gradient(circle at 12% 8%,rgba(124,58,237,.30),transparent 45%),radial-gradient(circle at 92% 28%,rgba(59,130,246,.28),transparent 45%),radial-gradient(circle at 50% 102%,rgba(236,72,153,.28),transparent 50%),var(--bg);background-attachment:fixed;min-height:100vh;overflow-x:hidden}
+.wrap{position:relative;z-index:1}
+.fl{position:fixed;bottom:-50px;z-index:0;pointer-events:none;opacity:.55;animation:up linear infinite}
+.card{border:1.5px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(120deg,var(--b),var(--p),var(--a)) border-box;animation:glow 4s ease-in-out infinite}
+textarea:focus{border-color:var(--b);box-shadow:0 0 0 3px rgba(59,130,246,.25)}
+.chip:hover,.chip:active{background:linear-gradient(120deg,var(--p),var(--a));color:#fff;border-color:transparent}
+.sm:hover{border-color:var(--p);color:var(--p)}
+.go:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(236,72,153,.5)}
+.her{background:var(--me);border:1px solid var(--bd)}
+.move{border-color:var(--p);background:linear-gradient(120deg,rgba(59,130,246,.08),rgba(236,72,153,.08))}
+.log div{padding:3px 0;color:var(--mut);animation:pop .3s ease}.log .ok{color:var(--p)}
+.br{display:flex;align-items:center;gap:8px;font-size:13px;margin:6px 0}.br span{width:72px;color:var(--mut)}.br b{width:42px;text-align:left}
+.tk{flex:1;height:8px;border-radius:99px;background:var(--me);overflow:hidden}.tk i{display:block;height:100%;width:0;border-radius:99px;transition:width 1s ease}
+.tg{display:inline-block;font-size:12px;padding:2px 10px;margin:3px 0 0 4px;border-radius:99px;background:var(--me);border:1px solid var(--bd)}
+.cur{display:inline-block;width:2px;height:1em;background:#fff;vertical-align:-3px;margin-right:2px;animation:bl .8s infinite}
+.cr{margin:18px auto 0;max-width:420px;padding:16px;border-radius:22px;border:1.5px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(120deg,var(--b),var(--p),var(--a)) border-box;box-shadow:0 10px 36px rgba(124,58,237,.3)}
+.crn{font-size:14px;color:var(--mut);line-height:2}.crn b{font-size:20px;font-weight:900;background:linear-gradient(120deg,var(--b),var(--p),var(--a),var(--b));background-size:220% 220%;animation:flow 6s ease infinite;-webkit-background-clip:text;background-clip:text;color:transparent}
+.crp{display:inline-block;margin-top:8px;padding:7px 20px;border-radius:999px;background:linear-gradient(120deg,var(--b),var(--p),var(--a));color:#fff;text-decoration:none;font-weight:700;direction:ltr;box-shadow:0 6px 18px rgba(124,58,237,.4)}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header><h1>💬 مترجم زبان پارتنر</h1><p>پیامش رو بنویس، ترجمه واقعیش رو بگیر!</p></header>
+ <div class="card">
+  <textarea id="in" rows="3" placeholder="مثلاً: باشه"></textarea>
+  <div class="chips" id="chips"></div>
+  <button class="go" id="go">ترجمه کن 🔮</button>
+ </div>
+ <div id="out"></div>
+ <footer>فقط برای خنده 😄 — ترجمه واقعی همیشه این بوده: بپرس و گوش بده 💛<div class="cr"><div class="crn">ساخته‌شده با 💜 توسط<br><b>ابوالفضل کوشکی</b> <span>(مستر سورس)</span></div><a class="crp" href="tel:09059885527">📞 09059885527</a></div></footer>
+</div>
+<script>
+var E=[
+["باشه|باشهدیگه|باشهبابا",["عصبانیه! خدا کمکت کنه.","باشه یعنی «همین الان بپرس چی شده»، نه «موافقم».","بحث تموم نشده؛ فقط وارد فاز سکوتِ پرحرف شده."],5,"گوشی رو بذار زمین و آروم بپرس «چی شده؟»"],
+["شببخیر|شبتبخیر|شبخوش",["کشته‌ای! خودت می‌دونی چرا.","این «شب بخیر» سرده؛ امشب خبری از خوابِ راحت برای تو نیست.","آژیر قرمزه؛ این شب بخیر به معنی شب بخیر نیست."],4,"زنگ بزن، پیام نده؛ و حتماً با لحن نرم."],
+["هیچی|هیچینیست|هیچیمنیست",["همه‌چیز هست، فقط منتظرم تو حدس بزنی.","هیچی یعنی «یه چیزی هست که اگه نپرسی بدتر میشه»."],4,"بگو «مطمئنی؟» و ۱۵ دقیقه ساکت بمون و گوش بده."],
+["خوبم|منخوبم|خوبمعزیزم",["خوب نیستم؛ لطفاً سؤالتو یه بار دیگه و جدی‌تر بپرس.","«خوبم» یعنی فعلاً خوب نیستم، ولی ترجیح میدم تو کشفش کنی."],3,"یه «واقعاً؟» با نگاه مهربون کارساز میشه."],
+["هرچیتوبگی|هرچیتوبخوای|هرجورتوخوای|هرجورراحتی",["نه! ولی تو باید خودت بفهمی چرا نه.","هرچی تو بگی یعنی «نظرت رو بگو، ولی نظرِ درست رو»."],4,"نظر خودتو با دقت بده؛ جواب سلیقه‌ای ممنوعه."],
+["چیزینگفتم|منکهچیزینگفتم",["گفتم، با ایموجی و لحن و نگاه. فقط تو نفهمیدی.","یعنی چیزی نگفتم ولی تو باید همه‌چیزو بفهمی."],3,"بگو «حق داری، بگو ببینم چی تو دلته»."],
+["خوشبگذره|بروخوشبگذره|خوشبگذرون",["اگه بری، فردا تا شب باید دلیلشو توضیح بدی.","خوش بگذره یعنی «ببینم چقدر بدون من خوش می‌گذره»."],5,"بگو «بدون تو خوش نمی‌گذره» و برگرد."],
+["مهمنیست|مهمنبود|اصلامهمنیست|مهمنیستبابا",["خیلی مهمه و تا سه ماه دیگه هم یادآوری میشه.","مهم نیست یعنی در ذهنم ثبت شد، بایگانی هم شد."],3,"همین الان یادداشت کن و حلش کن."],
+["دوستمنداری|دوستنداری|دیگهدوستمنداری",["یه بغل، یه توجه ویژه و یه تعریف می‌خوام.","این سؤال نیست؛ درخواست رسمی محبته."],4,"سه تا دلیل واقعی که دوستش داری بگو، بدون عجله."],
+["هرجا|کجابریم|هرجاتودوستداری|هرجاتوبگی|هرچیتودوستداری",["یه جای مشخص تو ذهنمه؛ تو باید حدس بزنی و درست هم حدس بزنی.","هرجا یعنی «جایی که من دوست دارم، بدون اینکه بگم»."],3,"سه تا گزینه بده و بگو «کدوم رو بیشتر دوست داری؟»"],
+["کجایی|کجاییتو",["دلم برات تنگ شده، یا جوابو می‌دونم و دارم تستت می‌کنم.","کجایی یعنی «چرا هنوز خبر ندادی؟»."],2,"راستش رو بگو و یه «دلم برات تنگ شده» هم اضافه کن."],
+["سیرم|نهسیرم|نهممنونسیرم",["نه نیستم؛ از غذای تو یه تیکه می‌خوام."],2,"از اول یه بشقاب اضافه بیار و بحث رو تموم کن."],
+["ولشکن|اصلاولشکن|بیخیالولشکن",["ولش نکن! همین الان ازم بپرس.","ولش کن یعنی «اصرار کن تا بگم»."],4,"کنارش بشین و بگو «ولش نمی‌کنم، تعریف کن»."],
+["لازمنیست|نیازینیست|خودمانجاممیدم",["لازمه! خیلی هم لازمه.","لازم نیست یعنی «اگه تو انجام ندی، بدجوری یادم می‌مونه»."],3,"بدون سؤال اضافه انجامش بده."],
+["جدی|عهجدی|جدیمیگی|واقعاجدی",["سرپا گوش می‌کنم؛ جوابت باید خیلی خوب باشه.","جدی؟ یعنی «دوباره بگو، ولی این بار درست»."],3,"اگه نمی‌دونی چی بگی، بگو «حق با توئه»."],
+["دلمبراتتنگشده|دوستتدارم|عاشقتم|دلتنگتم",["عاشقتم و حالم خوبه؛ فقط همین!","واقعاً دلش برات تنگ شده؛ این یکی تله نداره."],0,"جواب بده «منم»؛ یه ایموجی قلب هم بفرست."],
+["خستهشدم|خستهام|خستهشدمازهمهچی",["یه ساعت بغل و بدون سؤال می‌خوام.","راه‌حل نمی‌خواد؛ فقط یکی می‌خواد بگه «میدونم سخته»."],3,"چای بیار، چراغ رو کم کن و فقط گوش بده."],
+["بروبهکارتبرس|برودنبالکارت",["اگه واقعاً بری، دیگه جزو لیست نزدیکان نیستی.","یعنی «نرو!» با لحن تهدیدآمیز."],5,"نرو؛ بشین و بپرس چی شده."],
+["مرسی|ممنون|ممنونمازت",["مرسی کوتاه یعنی یه چیزی کم گذاشتی.","تشکر رسمی یعنی از نظرم کامل نبود."],2,"بپرس «چیزی بود که بهتر باشه؟»"],
+["بعداصحبتمیکنیم|بعداحرفمیزنیم",["یه بحث جدی در راهه؛ خودتو آماده کن."],4,"همین الان بپرس «الان بگو، گوش میدم»."],
+["یهحرفیدارم|یهچیزیبگم|بایدحرفبزنیم|میشهحرفبزنیم",["آماده باش؛ جلسه جدی در راهه.","این جمله معمولاً مقدمه یه گلایه‌ست."],4,"گوشی رو بذار کنار و کامل گوش بده."],
+["منومینمیفهمی|منودرکنمیکنی|نمیفهمی|تومنونمیفهمی",["می‌خواد بفهمی، بدون اینکه دوباره توضیح بده.","یعنی «فکر نمی‌کنم حواست به حرف‌هام باشه»."],4,"بگو «بگو، این بار بدون قضاوت گوش میدم»."],
+["فراموشکردی|یادتنیست|یادتنبود|یادتنرفت",["یه تاریخ مهم رو نادیده گرفتی؛ تقویم رو چک کن.","داره تستت می‌کنه و جواب غلط هزینه داره."],5,"اگه یادت نیست، صادقانه عذرخواهی کن و یه جبران بچین."],
+["اشکالینداره|ایرادینداره|عیبینداره",["اشکال داره، ولی مؤدبانه بیانش می‌کنم."],3,"یه عذرخواهی کوتاه و یه جبران کوچیک."],
+["اوکی|اوکیه|همهچیزاوکیه|اوک",["اوکی یعنی «تا آخر هفته یادمه»."],3,"یه پیام محبت‌آمیز بفرست."],
+["خودتمیدونی|خودتبهتربدونی|خودتمیدونیچرا",["نه، خودت نمی‌دونی؛ ولی باید بفهمی."],4,"فهرست کارهای اخیرت رو مرور کن و صادقانه عذرخواهی کن."],
+["چهخبر|چیکارمیکنی|چیکارمیکنیحالا",["کنجکاوِ توجهه؛ جواب «هیچی» ممنوع."],1,"یه جواب واقعی بده و یه سؤال برگردون."],
+["چراجوابنمیدی|جوابنمیدی|سینکردی|پیامموندیدی",["پیامش رو دیدی و جواب ندادی؛ لیست شکایات باز شد.","نگرانه و عصبانی، هر دو با هم."],4,"سریع جواب بده و دلیل واقعی تأخیر رو بگو."],
+["بلهبله|آرهآره|بلهبلهحتما|آرهحتما",["تکرار «بله» یعنی کنایه؛ اصلاً موافق نیست."],4,"قبل از اینکه بدتر بشه بپرس «کجای حرفم اشتباهه؟»"],
+["جالبه|چهجالب|جالبهکهاینطوره|بهبه",["جالب یعنی «اصلاً جالب نیست»."],3,"بحث رو تغییر نده؛ بپرس «نظر واقعیت چیه؟»"],
+["برمبخوابم|منبرمبخوابم|خوابمیاد",["هم خسته‌ست، هم یه کم ناراحت؛ دوست داره تو بگی نرو."],2,"بگو «بیا یه کم دیگه بمون، دلم میخواد»."],
+["عصبانینیستم|ناراحتنیستم|منعصبانینیستم|قهرنیستم",["هستم؛ فقط در حال مدیریت احساساتم."],4,"به جای انکار، بگو «حس می‌کنم یه چیزی هست»."],
+["فقطخواستمبدونی|فقطمیخواستمبدونی",["مقدمه یه گلایه‌ست؛ آماده باش."],3,"بگو «بگو، دارم گوش میدم»."],
+["نگرانتشدم|نگرانتبودم|نگرانشدم",["هم دلش برات تنگ شده، هم اگه خبر ندی عصبانی میشه."],3,"یه پیام کوتاه بفرست و عذرخواهی کن."],
+["چاقشدم|زشتشدم|امروزافتضاحم|خیلیخوشگلنیستم|منخوشگلنیستم",["دنبال تعریف صادقانه‌ست، نه بحث منطقی."],3,"یه تعریف مشخص بگو و بحث نکن."],
+["گرسنمه|گشنمه|سردمه|تشنمه",["یه نیاز واقعی و یه امتحان توجه؛ هردو با هم."],1,"قبل از سؤال دوم، یه کاری بکن."],
+["دلمگرفته|حالمبدهه|حوصلهندارم|حالمخوبنیست",["حالش خوب نیست؛ راه‌حل نمی‌خواد، همراهی می‌خواد."],3,"کنارش بشین و فقط گوش بده."],
+["نمیدونم|نمیدونمتوبگو",["می‌دونه، فقط می‌خواد تو پیشنهاد بدی."],3,"یه پیشنهاد مشخص و مهربون بده."]
+];
+var T=[
+["غذا|ناهار|شام|صبحانه|گرسنه|گشنه|رستوران|پیتزا|کافه|بستنی",["موضوع غذاست، ولی ته‌ش یعنی «برنامه‌ریزی کن و منو سورپرایز کن».","غذا فقط بهونه‌ست؛ می‌خواد ببینه حواست بهش هست یا نه."],2,"یه پیشنهاد مشخص بده، نه «هرچی تو بخوای»."],
+["بریم|بیرون|گردش|سفر|شمال|سینما|پارک|خرید",["دلش یه برنامه خوب می‌خواد و داره ایده تو رو می‌سنجه.","می‌خواد بره بیرون؛ فقط نمی‌خواد خودش همه‌چیز رو برنامه‌ریزی کنه."],2,"یه برنامه کامل با ساعت و مکان بچین."],
+["دوستم|مامانم|بابام|خواهرم|فامیل|مهمونی|عروسی|دورهمی",["یه موضوع خانوادگی یا اجتماعی در راهه و حمایت تو رو می‌خواد.","می‌خواد تو طرف اون باشی، حتی اگه کامل ماجرا رو ندونی."],3,"اول گوش بده، بعد نظر بده؛ ترتیبش مهمه."],
+["گوشی|پیام|ریپلای|سین|جواب|آنلاین|چت|زنگ",["حواست به پیام‌ها نبوده و این رو یادداشت کرده.","ماجرا گوشیه، ولی اصل ماجرا «چقدر برات مهمم؟» هست."],3,"قبل از توضیح، یه عذرخواهی کوتاه."],
+["دیر|منتظر|هنوز|ساعت|میرسی|بیای",["ساعت‌شماری در جریانه؛ هر دقیقه تأخیر یعنی یه توضیح بیشتر.","دیر کردی و داره حساب می‌کنه چقدر باید جبران کنی."],3,"زودتر خبر بده و دلیل واقعی رو بگو."],
+["ظاهر|لباس|مو|چاق|لاغر|قشنگ|خوشگل|آرایش|ارایش|عکس|زشت",["دنبال تعریف صادقانه‌ست، نه تحلیل منطقی.","می‌خواد بشنوه که دیده شده؛ جزئیات رو ببین و بگو."],2,"یه تعریف مشخص بگو، مثلاً درباره رنگ یا مدل."],
+["پول|گرون|قیمت|هدیه|کادو|تولد|سالگرد|یادته",["یه تاریخ یا هدیه مهم در راهه؛ هیچی نمی‌گه تا ببینه یادت هست.","تست حافظه شروع شده؛ جواب غلط هزینه داره."],4,"تقویم رو چک کن و از همین الان یه سورپرایز بچین."],
+["قهر|دعوا|بحث|ناراحت|دلخور|عصبانی|اشتباه|ببخش|مقصر",["دعوا هنوز تموم نشده؛ فقط «سکوت» به حالت فعال رفته.","می‌خواد بفهمی چی شده، بدون اینکه خودش مستقیم بگه."],5,"با لحن آروم بگو «حق داری، بگو ببینم چی شد»."],
+["عشق|دلتنگ|عزیزم|جانم|ببوس|بغل|قلبم|عاشق",["شرایط امنه! دلش نرمه و فقط یه جواب گرم می‌خواد.","محبت واقعیه؛ جوابش رو با یه جمله و یه ایموجی بده."],0,"جواب بده «منم» و یه جمله از دلت اضافه کن."],
+["کار|شرکت|درس|امتحان|خسته|استرس|کلاس|دانشگاه",["روزش سنگین بوده و همدلی می‌خواد، نه راه‌حل.","فشار داره و فقط می‌خواد یکی بگه «سخته، میدونم»."],2,"چای، سکوت، و یه «سخته، میدونم»."],
+["خوابم|بخوابم|شب|بیدار|بیخوابی",["حالش خسته‌ست و دلش بغل یا صدای تو رو می‌خواد.","می‌خواد صحبت رو ببنده، ولی دوست داره آخرین حرف مال تو باشه."],2,"یه پیام آروم و شبانه بفرست."],
+["نظرت|بهنظرت|چطوره|کدوم|انتخاب|بهتره",["این سؤال تله‌ست؛ جواب «قشنگه» به‌تنهایی کافی نیست.","می‌خواد نظر تو رو بشنوه، ولی یه جواب مشخص می‌خواد."],3,"یه انتخاب قاطع بگو و دو تا دلیل بیار."]
+];
+var ST=["تحلیل لحن پیام","بررسی علائم نگارشی و ایموجی","تطبیق با الگوهای ثبت‌شده","محاسبه سطح خطر"];
+var ch=["باشه","هیچی","خوبم","مهم نیست","شب بخیر","هرچی تو بگی","جالبه","فراموش کردی؟"];
+var busy=false,cur={raw:"",list:[],i:0};
+var $=function(i){return document.getElementById(i)};
+var fa=function(n){return Number(n).toLocaleString("fa-IR")};
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function norm(s){return s.replace(/ي/g,"ی").replace(/ك/g,"ک").replace(/[\u064B-\u065F]/g,"").replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF\u2764\uFE0F\u200d]/gu,"").replace(/[\s\u200c.,!؟?،:؛"'«»()\-ـ…]/g,"")}
+function hash(s){var h=7;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h}
+function feat(r){var n=norm(r);return{n:n,dots:/\.{2,}|…/.test(r),q:/[؟?]/.test(r),ex:/!/.test(r),smile:/[🙂😊😌🙃😉☺]/u.test(r),mad:/[😡😤🙄😒😑😐]/u.test(r),sad:/[😭😢🥲😔]/u.test(r),love:/[❤💕😍🥰💜💙😘]/u.test(r),stretch:/(.)\1{2,}/u.test(r),short:n.length<=7,long:n.length>45}}
+function score(n,n2,list,minLen,thr){var out=[];list.forEach(function(e){var best=0;e[0].split("|").forEach(function(k){k=norm(k);if(!k)return;var s=0;if(n===k||n2===k)s=100;else if(k.length>=minLen&&(n.indexOf(k)>-1||n2.indexOf(k)>-1))s=Math.min(90,30+k.length*5)*(n.length>40?.8:1);if(s>best)best=s});if(best>=thr)out.push({e:e,s:best})});return out.sort(function(a,b){return b.s-a.s})}
+function TF(f){var a=[];
+ if(f.love)a.push({t:"دلش نرمه و محبت می‌خواد؛ شرایط امنه.",l:1,m:"یه جمله گرم و یه ایموجی قلب."});
+ if(f.q)a.push({t:"این سؤال یه تله داره؛ جواب درست رو می‌دونه و داره امتحانت می‌کنه.",l:3,m:"آروم و صادقانه جواب بده و آخرش یه سؤال مهربون برگردون."});
+ if(f.mad||f.dots)a.push({t:"ناراحتی در حال بارگذاریه؛ هرچی بگی فعلاً پردازش نمیشه.",l:4,m:"اول همدلی کن، بعد توضیح بده."});
+ if(f.ex)a.push({t:"هیجانش بالاست؛ یا خیلی خوشحاله یا خیلی عصبانی و فقط لحنش مشخص می‌کنه.",l:3,m:"هم‌سطح انرژیش جواب بده و نگو «آروم باش»."});
+ if(f.short)a.push({t:"کوتاه نوشته، یعنی بلند فکر کرده؛ معنی پنهان این پیام از ظاهرش بیشتره.",l:3,m:"بپرس «چی شده؟» و ۱۰ دقیقه کامل گوش بده."});
+ if(f.long)a.push({t:"پیام بلند یعنی چند روزه تو دلش بوده؛ شنونده می‌خواد، نه راه‌حل.",l:3,m:"وسط حرفش نپر؛ آخرش بگو «حق داری»."});
+ a.push({t:"پیامش یه معنی ظاهری داره و یه معنی واقعی؛ معنی واقعی یعنی «حواست بهم هست؟».",l:3,m:"توجه، گوش دادن و یه سؤال مهربون هیچ‌وقت اشتباه نیست."});
+ return a}
+function cands(raw){
+ var f=feat(raw),n=f.n,n2=n.replace(/(.)\1+/gu,"$1"),list=[];
+ score(n,n2,E,3,30).concat(score(n,n2,T,2,22)).forEach(function(m){m.e[1].forEach(function(v){list.push({t:v,l:m.e[2],m:m.e[3],ex:m.s>=100,s:m.s})})});
+ TF(f).forEach(function(x){list.push({t:x.t,l:x.l,m:x.m,ex:false,s:0})});
+ return list}
+function copy(t,b){
+ function ok(){b.textContent="✔️ انجام شد"}
+ function fb(){var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");ok()}catch(x){}a.remove()}
+ try{navigator.clipboard.writeText(t).then(ok,fb)}catch(x){fb()}}
+function bar(n,v,c){return'<div class="br"><span>'+n+'</span><div class="tk"><i data-w="'+v+'" style="background:'+c+'"></i></div><b>'+fa(v)+'٪</b></div>'}
+function show(d,raw){
+ var f=feat(raw),h=hash(raw),tags=[],l=d.l,cl=function(x){return Math.max(0,Math.min(99,x))};
+ if(f.dots){tags.push("نقطه‌چین: ناراحتی در حال بارگذاری");l++}
+ if(f.smile){tags.push("لبخند اجباری");if(l>=2)l++}
+ if(f.mad){tags.push("ایموجی عصبانی یا بی‌حوصله");l++}
+ if(f.sad)tags.push("ایموجی غمگین: نیاز به بغل");
+ if(f.love){tags.push("ایموجی محبت: شرایط امنه");l--}
+ if(f.stretch)tags.push("کشیدن حروف: ناز یا اصرار");
+ if(f.q)tags.push("علامت سؤال: احتمال تله");
+ if(f.ex)tags.push("علامت تعجب: هیجان بالا");
+ if(f.short)tags.push("پیام کوتاه: معنی پنهان زیاد");
+ if(f.long)tags.push("پیام بلند: چند روزه تو دلش بوده");
+ if(!tags.length)tags.push("لحن خنثی");
+ l=Math.max(0,Math.min(5,l));
+ var conf=d.ex?94+h%5:70+h%20,an=cl(l*17+h%11-2),hu=cl(l*14+(h>>3)%16),tr=cl(f.q?55+h%35:12+l*9+(h>>5)%18);
+ var o='<div class="lab">پیام او 👩‍🦰</div><div class="b her">'+esc(raw)+'</div>'+
+ '<div class="lab">ترجمه واقعی 🔮</div><div class="b you"><span id="tr"></span><span class="cur"></span></div>'+
+ '<div class="meter">سطح خطر: ';
+ for(var k=1;k<=5;k++)o+='<i class="'+(k<=l?"on":"")+'">'+(l===0?"💛":"🔥")+'</i>';
+ o+='</div>'+bar("عصبانیت",an,"linear-gradient(90deg,#ec4899,#7c3aed)")+bar("دلخوری",hu,"linear-gradient(90deg,#7c3aed,#3b82f6)")+bar("ضریب تله",tr,"linear-gradient(90deg,#3b82f6,#ec4899)");
+ o+='<div class="lab">تحلیل لحن</div><div>'+tags.map(function(x){return'<span class="tg">'+x+'</span>'}).join("")+'</div>'+
+ '<div class="move">🧠 حرکت پیشنهادی: '+d.m+'</div>'+
+ '<span class="tag">⚙️ اطمینان موتور: '+fa(conf)+'٪</span>'+
+ '<div class="row"><button class="sm" id="again">🎲 تفسیر دیگه</button><button class="sm" id="cp">📋 کپی</button><button class="sm" id="sh">📤 اشتراک</button></div>';
+ $("out").innerHTML=o;
+ setTimeout(function(){[].forEach.call(document.querySelectorAll(".tk i"),function(e){e.style.width=e.dataset.w+"%"})},60);
+ var p=0,el=$("tr"),tm=setInterval(function(){p++;el.textContent=d.t.slice(0,p);if(p>=d.t.length){clearInterval(tm);var c=document.querySelector(".cur");if(c)c.remove()}},24);
+ $("again").onclick=function(){run(true)};
+ var msg="پیامش: «"+raw+"»\nترجمه واقعی: "+d.t+"\n🔥 سطح خطر: "+fa(l)+" از ۵\n— مترجم زبان پارتنر";
+ $("cp").onclick=function(){copy(d.t,this)};
+ $("sh").onclick=function(){var b=this;if(navigator.share)navigator.share({text:msg}).catch(function(){});else copy(msg,b)};
+}
+function run(again){
+ if(busy)return;
+ var raw=$("in").value.trim();
+ if(!raw){$("in").focus();return}
+ busy=true;
+ if(again&&cur.raw===raw&&cur.list.length)cur.i=(cur.i+1)%cur.list.length;else cur={raw:raw,list:cands(raw),i:0};
+ var d=cur.list[cur.i],k=0;
+ $("out").innerHTML='<div class="log" id="lg"></div>';
+ (function step(){
+  if(k<ST.length){$("lg").insertAdjacentHTML("beforeend",'<div class="ok">✓ '+ST[k]+'</div>');k++;setTimeout(step,300)}
+  else{busy=false;show(d,raw)}
+ })();
+}
+ch.forEach(function(c){var b=document.createElement("button");b.className="chip";b.textContent=c;b.onclick=function(){$("in").value=c;run(false)};$("chips").appendChild(b)});
+$("go").onclick=function(){run(false)};
+$("in").addEventListener("keydown",function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();run(false)}});
+(function(){var em=["💜","💙","🩷","✨","🤍","💬"];for(var i=0;i<14;i++){var s=document.createElement("span");s.className="fl";s.textContent=em[i%em.length];s.style.left=Math.random()*100+"%";s.style.fontSize=(14+Math.random()*18)+"px";s.style.animationDuration=(14+Math.random()*16)+"s";s.style.animationDelay=(-Math.random()*20)+"s";document.body.appendChild(s)}})();
+</script>
+</body>
+</html>
